@@ -1,0 +1,119 @@
+[gd_scene load_steps=4 format=3 uid="uid://n0pqo2e5icrm"]
+
+[ext_resource type="Script" uid="uid://c53xuy5vvf4sx" path="res://node_2d.gd" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://dbe1n2aloi1fa" path="res://iwate.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://dnqy3ygu7bnr" path="res://icon.svg" id="3_epypp"]
+
+[node name="Board" type="Node2D"]
+script = ExtResource("1_epypp")
+
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(-282.00003, -1.1920929e-07)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_epypp")
+
+[node name="Player1" type="Sprite2D" parent="."]
+position = Vector2(719, -292)
+rotation = -3.1415927
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_epypp")
+
+[node name="Player2" type="Sprite2D" parent="."]
+position = Vector2(720, -146)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_epypp")
+
+[node name="RollButton" type="Button" parent="."]
+offset_left = 432.0
+offset_top = 230.0
+offset_right = 520.0
+offset_bottom = 317.0
+text = "さいころを
+まわす"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Positions" type="Node2D" parent="."]
+
+[node name="一関市" type="Marker2D" parent="Positions"]
+position = Vector2(-290, 278)
+
+[node name="平泉町" type="Marker2D" parent="Positions"]
+position = Vector2(-301, 234)
+
+[node name="奥州市" type="Marker2D" parent="Positions"]
+position = Vector2(-311, 176)
+
+[node name="金ケ崎町" type="Marker2D" parent="Positions"]
+position = Vector2(-314, 140)
+
+[node name="北上市" type="Marker2D" parent="Positions"]
+position = Vector2(-314, 117)
+
+[node name="花巻市" type="Marker2D" parent="Positions"]
+position = Vector2(-312, 74)
+
+[node name="紫波町" type="Marker2D" parent="Positions"]
+position = Vector2(-295, 37)
+
+[node name="矢巾町" type="Marker2D" parent="Positions"]
+position = Vector2(-283, -2)
+
+[node name="盛岡市" type="Marker2D" parent="Positions"]
+position = Vector2(-285, -35)
+
+[node name="滝沢市" type="Marker2D" parent="Positions"]
+position = Vector2(-297, -68)
+
+[node name="八幡平市" type="Marker2D" parent="Positions"]
+position = Vector2(-336, -141)
+
+[node name="岩手町" type="Marker2D" parent="Positions"]
+position = Vector2(-278, -170)
+
+[node name="二戸市" type="Marker2D" parent="Positions"]
+position = Vector2(-271, -263)
+
+[node name="軽米町" type="Marker2D" parent="Positions"]
+position = Vector2(-202, -287)
+
+[node name="洋野町" type="Marker2D" parent="Positions"]
+position = Vector2(-132, -306)
+
+[node name="久慈市" type="Marker2D" parent="Positions"]
+position = Vector2(-60, -227)
+
+[node name="野田村" type="Marker2D" parent="Positions"]
+position = Vector2(-42, -185)
+
+[node name="普代村" type="Marker2D" parent="Positions"]
+position = Vector2(-23, -147)
+
+[node name="田野畑村" type="Marker2D" parent="Positions"]
+position = Vector2(-21, -105)
+
+[node name="岩泉町" type="Marker2D" parent="Positions"]
+position = Vector2(-20, -76)
+
+[node name="宮古市" type="Marker2D" parent="Positions"]
+position = Vector2(10, -5)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="DiceLabel" type="Label" parent="."]
+offset_left = 318.0
+offset_top = 57.0
+offset_right = 358.0
+offset_bottom = 80.0
+metadata/_edit_use_anchors_ = true
+
+[node name="StatusLabel" type="Label" parent="."]
+offset_left = 305.0
+offset_top = -170.0
+offset_right = 446.0
+offset_bottom = -132.0
+
+[node name="TurnLabel" type="Label" parent="."]
+offset_left = 309.0
+offset_top = -55.0
+offset_right = 496.0

@@ -16,7 +16,7 @@ func _ready() -> void:
 	# 初期配置
 	for i in range(players.size()):
 		players[i].position = positions[player_indices[i]].position
-	status_label.text = "準備中"
+		status_label.text = "準備中"
 	update_turn_label()
 	# ボタンの接続
 	roll_button.connect("pressed", Callable(self, "on_player_roll"))
@@ -39,7 +39,7 @@ func do_roll() -> void:
 	is_moving = true
 	roll_button.disabled = true
 	var dice = randi() % 6 + 1
-	dice_label.text = str(dice)
+	dice_label.text = "出た目：" + str(dice)
 	var game_over = await move_player_stepwise(current_turn, dice)
 	if game_over:
 		return
@@ -59,7 +59,7 @@ func do_bot_turn() -> void:
 	status_label.text = "Bot が考え中..."
 	await get_tree().create_timer(0.6).timeout  # 思考演出
 	var dice = randi() % 6 + 1
-	dice_label.text = str(dice)
+	dice_label.text = "出た目：" + str(dice)
 	var game_over = await move_player_stepwise(1, dice)
 	if game_over:
 		return
@@ -72,15 +72,11 @@ func do_bot_turn() -> void:
 func move_player_stepwise(player_id: int, steps: int) -> bool:
 	status_label.text = "移動中"
 	for i in range(steps):
-		# 既にゴールにいるならそれ以上進めない
 		if player_indices[player_id] >= positions.size() - 1:
 			break
 		player_indices[player_id] += 1
 		players[player_id].position = positions[player_indices[player_id]].position
-		# マス間の待ち（視覚的に経由しているように見せる）
 		await get_tree().create_timer(0.3).timeout
-
-		# ※ここで到達判定しても良いが、ループ後の判定でもOK
 
 	# ゴール判定
 	if player_indices[player_id] == positions.size() - 1:
@@ -91,7 +87,8 @@ func move_player_stepwise(player_id: int, steps: int) -> bool:
 		return true
 
 	# 移動終了（ゴールでない）
-	status_label.text = "停止中"
+	var current_pos_name = positions[player_indices[player_id]].name
+	status_label.text = "停止中（" + current_pos_name + "）"
 	current_turn = (current_turn + 1) % players.size()
 	update_turn_label()
 	is_moving = false

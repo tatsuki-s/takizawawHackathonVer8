@@ -13,26 +13,23 @@ scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_epypp")
 
 [node name="Player1" type="Sprite2D" parent="."]
-position = Vector2(564, -64)
+position = Vector2(719, -292)
+rotation = -3.1415927
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_epypp")
 
 [node name="Player2" type="Sprite2D" parent="."]
-position = Vector2(1128, -128)
+position = Vector2(720, -146)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_epypp")
 
-[node name="DiceLabel" type="Label" parent="."]
-offset_left = -332.0
-offset_top = -55.0
-offset_right = -292.0
-offset_bottom = -32.0
-metadata/_edit_use_anchors_ = true
-
 [node name="RollButton" type="Button" parent="."]
-offset_left = 491.0
-offset_top = 101.0
-offset_right = 571.0
-offset_bottom = 132.0
-text = "サイコロ"
+offset_left = -605.0
+offset_top = 231.0
+offset_right = -517.0
+offset_bottom = 318.0
+text = "さいころを
+まわす"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
@@ -41,74 +38,231 @@ text = "サイコロ"
 [node name="一関市" type="Marker2D" parent="Positions"]
 position = Vector2(-290, 278)
 
+[node name="description" type="Label" parent="Positions/一関市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/一関市"]
+
 [node name="平泉町" type="Marker2D" parent="Positions"]
 position = Vector2(-301, 234)
+
+[node name="description" type="Label" parent="Positions/平泉町"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/平泉町"]
 
 [node name="奥州市" type="Marker2D" parent="Positions"]
 position = Vector2(-311, 176)
 
+[node name="description" type="Label" parent="Positions/奥州市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/奥州市"]
+
 [node name="金ケ崎町" type="Marker2D" parent="Positions"]
 position = Vector2(-314, 140)
+
+[node name="description" type="Label" parent="Positions/金ケ崎町"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/金ケ崎町"]
 
 [node name="北上市" type="Marker2D" parent="Positions"]
 position = Vector2(-314, 117)
 
+[node name="description" type="Label" parent="Positions/北上市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/北上市"]
+
 [node name="花巻市" type="Marker2D" parent="Positions"]
 position = Vector2(-312, 74)
+
+[node name="description" type="Label" parent="Positions/花巻市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/花巻市"]
 
 [node name="紫波町" type="Marker2D" parent="Positions"]
 position = Vector2(-295, 37)
 
+[node name="description" type="Label" parent="Positions/紫波町"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/紫波町"]
+
 [node name="矢巾町" type="Marker2D" parent="Positions"]
 position = Vector2(-283, -2)
+
+[node name="description" type="Label" parent="Positions/矢巾町"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/矢巾町"]
 
 [node name="盛岡市" type="Marker2D" parent="Positions"]
 position = Vector2(-285, -35)
 
+[node name="description" type="Label" parent="Positions/盛岡市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/盛岡市"]
+
 [node name="滝沢市" type="Marker2D" parent="Positions"]
 position = Vector2(-297, -68)
+
+[node name="description" type="Label" parent="Positions/滝沢市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/滝沢市"]
 
 [node name="八幡平市" type="Marker2D" parent="Positions"]
 position = Vector2(-336, -141)
 
+[node name="description" type="Label" parent="Positions/八幡平市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/八幡平市"]
+
 [node name="岩手町" type="Marker2D" parent="Positions"]
 position = Vector2(-278, -170)
+
+[node name="description" type="Label" parent="Positions/岩手町"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/岩手町"]
 
 [node name="二戸市" type="Marker2D" parent="Positions"]
 position = Vector2(-271, -263)
 
+[node name="description" type="Label" parent="Positions/二戸市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/二戸市"]
+
 [node name="軽米町" type="Marker2D" parent="Positions"]
 position = Vector2(-202, -287)
+
+[node name="description" type="Label" parent="Positions/軽米町"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/軽米町"]
 
 [node name="洋野町" type="Marker2D" parent="Positions"]
 position = Vector2(-132, -306)
 
+[node name="description" type="Label" parent="Positions/洋野町"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/洋野町"]
+
 [node name="久慈市" type="Marker2D" parent="Positions"]
 position = Vector2(-60, -227)
+
+[node name="description" type="Label" parent="Positions/久慈市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/久慈市"]
 
 [node name="野田村" type="Marker2D" parent="Positions"]
 position = Vector2(-42, -185)
 
+[node name="description" type="Label" parent="Positions/野田村"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/野田村"]
+
 [node name="普代村" type="Marker2D" parent="Positions"]
 position = Vector2(-23, -147)
+
+[node name="description" type="Label" parent="Positions/普代村"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/普代村"]
 
 [node name="田野畑村" type="Marker2D" parent="Positions"]
 position = Vector2(-21, -105)
 
+[node name="description" type="Label" parent="Positions/田野畑村"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/田野畑村"]
+
 [node name="岩泉町" type="Marker2D" parent="Positions"]
 position = Vector2(-20, -76)
 
+[node name="description" type="Label" parent="Positions/岩泉町"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/岩泉町"]
+
 [node name="宮古市" type="Marker2D" parent="Positions"]
-position = Vector2(25, -5)
+position = Vector2(10, -5)
+
+[node name="description" type="Label" parent="Positions/宮古市"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/宮古市"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="DiceLabel" type="Label" parent="."]
+offset_left = -600.0
+offset_top = -207.0
+offset_right = -534.0
+offset_bottom = -184.0
+text = "ダイスの目"
+metadata/_edit_use_anchors_ = true
 
 [node name="StatusLabel" type="Label" parent="."]
-offset_left = 381.0
-offset_top = -223.0
-offset_right = 421.0
-offset_bottom = -200.0
+offset_left = -604.0
+offset_top = -251.0
+offset_right = -548.0
+offset_bottom = -224.0
+text = "Status"
 
 [node name="TurnLabel" type="Label" parent="."]
-offset_left = 564.0
-offset_top = -64.0
-offset_right = 604.0
-offset_bottom = -41.0
+offset_left = -603.0
+offset_top = -298.0
+offset_right = -551.0
+offset_bottom = -268.0
+text = "ターン："
+
+[node name="Player1Satus" type="Node2D" parent="."]
+position = Vector2(164, -263)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player1Satus"]
+
+[node name="Label" type="Label" parent="Player1Satus"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "盛岡"
+
+[node name="Player2Satus" type="Node2D" parent="."]
+position = Vector2(171, 74)
+
+[node name="Sprite2D" type="Sprite2D" parent="Player2Satus"]
+
+[node name="Label" type="Label" parent="Player2Satus"]
+offset_right = 40.0
+offset_bottom = 23.0
