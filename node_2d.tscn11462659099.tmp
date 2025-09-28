@@ -1,14 +1,12 @@
-[gd_scene load_steps=19 format=3 uid="uid://n0pqo2e5icrm"]
+[gd_scene load_steps=17 format=3 uid="uid://n0pqo2e5icrm"]
 
 [ext_resource type="Script" uid="uid://c53xuy5vvf4sx" path="res://node_2d.gd" id="1_epypp"]
 [ext_resource type="AudioStream" uid="uid://cldyqogl6v6ml" path="res://music/bgm-title.mp3" id="2_d2bti"]
 [ext_resource type="Texture2D" uid="uid://dbe1n2aloi1fa" path="res://iwate.png" id="2_epypp"]
-[ext_resource type="AudioStream" uid="uid://e47seikek5jg" path="res://music/se-saikoro.mp3" id="3_flf07"]
 [ext_resource type="Texture2D" uid="uid://rfqg71xwkfsw" path="res://pictures/botIcon.png" id="3_nr8wp"]
 [ext_resource type="AudioStream" uid="uid://qml5hkf8sr7e" path="res://music/bgm-game.mp3" id="3_ta5nu"]
 [ext_resource type="Texture2D" uid="uid://bb2bjpskiqqv6" path="res://pictures/itinoseki.jpg" id="4_0hol4"]
 [ext_resource type="Texture2D" uid="uid://oj8ugpglijv2" path="res://pictures/youIcon.png" id="4_d2bti"]
-[ext_resource type="AudioStream" uid="uid://b27eqtj0a1hi5" path="res://music/se-idou.mp3" id="4_k73cj"]
 [ext_resource type="Texture2D" uid="uid://dgvk3ghy41pvw" path="res://pictures/konjikidou.jpg" id="5_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://bmhle0wwqneol" path="res://pictures/hanamaki.jpg" id="6_hqns4"]
 [ext_resource type="Texture2D" uid="uid://bdyluxnv5qc26" path="res://pictures/moriokaeki.jpg" id="7_x0ka3"]
@@ -28,12 +26,6 @@ autoplay = true
 
 [node name="playBGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_ta5nu")
-
-[node name="moveSE" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_k73cj")
-
-[node name="diceSE" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_flf07")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2(0, -720)

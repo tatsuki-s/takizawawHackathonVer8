@@ -30,6 +30,9 @@ func _ready() -> void:
 	player_picture[0].texture = default_picture
 	player_picture[1].texture = default_picture
 	
+	#if(not camera.global_position == Vector2(0, -720)):
+
+	
 	player_indices = [0, 0]    # 各プレイヤーのマス番号
 	current_turn = 0      # 0 = プレイヤー1, 1 = Bot
 	is_moving = false
@@ -69,6 +72,7 @@ func do_roll() -> void:
 	roll_button.disabled = true
 	var dice = randi() % 6 + 1
 	dice_label.text = "出た目：" + str(dice)
+	$diceSE.play()
 	var game_over = await move_player_stepwise(current_turn, dice)
 	if game_over:
 		return
@@ -89,6 +93,7 @@ func do_bot_turn() -> void:
 	await get_tree().create_timer(0.6).timeout 
 	var dice = randi() % 6 + 1
 	dice_label.text = "出た目：" + str(dice)
+	$diceSE.play()
 	var game_over = await move_player_stepwise(1, dice)
 	if game_over:
 		return
@@ -104,6 +109,7 @@ func move_player_stepwise(player_id: int, steps: int) -> bool:
 	for i in range(steps):
 		if player_indices[player_id] >= positions.size() - 1:
 			break
+		$moveSE.play()
 		player_indices[player_id] += 1
 		players[player_id].position = positions[player_indices[player_id]].position
 		player_position[player_id].text = str(positions[player_indices[player_id]].get_node("description").text)		
@@ -130,3 +136,5 @@ func move_player_stepwise(player_id: int, steps: int) -> bool:
 func _on_start_button_pressed() -> void:
 	#print("カメラの global_position: ", camera.global_position)
 	camera.offset = Vector2(0, 0)
+	$titleBGM.stop()
+	$playBGM.play()
