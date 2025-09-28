@@ -1,51 +1,27 @@
-[gd_scene load_steps=15 format=3 uid="uid://n0pqo2e5icrm"]
+[gd_scene load_steps=4 format=3 uid="uid://n0pqo2e5icrm"]
 
 [ext_resource type="Script" uid="uid://c53xuy5vvf4sx" path="res://node_2d.gd" id="1_epypp"]
 [ext_resource type="Texture2D" uid="uid://dbe1n2aloi1fa" path="res://iwate.png" id="2_epypp"]
-[ext_resource type="Texture2D" uid="uid://rfqg71xwkfsw" path="res://pictures/botIcon.png" id="3_nr8wp"]
-[ext_resource type="Texture2D" uid="uid://bb2bjpskiqqv6" path="res://pictures/itinoseki.jpg" id="4_0hol4"]
-[ext_resource type="Texture2D" uid="uid://oj8ugpglijv2" path="res://pictures/youIcon.png" id="4_d2bti"]
-[ext_resource type="Texture2D" uid="uid://dgvk3ghy41pvw" path="res://pictures/konjikidou.jpg" id="5_q6r6c"]
-[ext_resource type="Texture2D" uid="uid://bmhle0wwqneol" path="res://pictures/hanamaki.jpg" id="6_hqns4"]
-[ext_resource type="Texture2D" uid="uid://bdyluxnv5qc26" path="res://pictures/moriokaeki.jpg" id="7_x0ka3"]
-[ext_resource type="Texture2D" uid="uid://c7ecyh7soiq5o" path="res://pictures/koiwai.jpg" id="8_0h7mo"]
-[ext_resource type="Texture2D" uid="uid://dm6ps70qf587e" path="res://pictures/takizawa.jpg" id="8_x0ka3"]
-[ext_resource type="Texture2D" uid="uid://b773qi5x4khy7" path="res://pictures/iwatesan.jpg" id="9_nr8wp"]
-[ext_resource type="Texture2D" uid="uid://cegph8i8rvh3w" path="res://pictures/kohaku.jpg" id="10_d2bti"]
-[ext_resource type="Texture2D" uid="uid://dlxxl1r6mmfmm" path="res://pictures/miyako.jpg" id="11_ta5nu"]
-[ext_resource type="Texture2D" uid="uid://ccp6wtilr4aas" path="res://title.png" id="13_0h7mo"]
+[ext_resource type="Texture2D" uid="uid://dnqy3ygu7bnr" path="res://icon.svg" id="3_epypp"]
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_epypp")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -720)
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-
-[node name="StartButton" type="Button" parent="."]
-offset_left = 340.0
-offset_top = -491.0
-offset_right = 626.0
-offset_bottom = -390.0
-theme_override_font_sizes/font_size = 45
-text = "ゲームスタート！"
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(-282.00003, -1.1920929e-07)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("2_epypp")
 
-[node name="Player2" type="Sprite2D" parent="."]
-position = Vector2(755, -148)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("3_nr8wp")
-
 [node name="Player1" type="Sprite2D" parent="."]
-position = Vector2(751.99994, -288)
+position = Vector2(719, -292)
 rotation = -3.1415927
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_d2bti")
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_epypp")
+
+[node name="Player2" type="Sprite2D" parent="."]
+position = Vector2(720, -146)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_epypp")
 
 [node name="RollButton" type="Button" parent="."]
 offset_left = -605.0
@@ -55,10 +31,7 @@ offset_bottom = 318.0
 text = "さいころを
 まわす"
 
-[node name="Title" type="Sprite2D" parent="."]
-position = Vector2(-153, -727)
-scale = Vector2(0.95, 0.95)
-texture = ExtResource("13_0h7mo")
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Positions" type="Node2D" parent="."]
 
@@ -71,11 +44,10 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "一関市：
 岩手県最南端に位置する市。
-一関図書館にはかつて大船渡線を走っていたSLが保存されている。"
+一関高専がある。"
 
 [node name="picture" type="Sprite2D" parent="Positions/一関市"]
 visible = false
-texture = ExtResource("4_0hol4")
 
 [node name="平泉町" type="Marker2D" parent="Positions"]
 position = Vector2(-301, 234)
@@ -84,13 +56,9 @@ position = Vector2(-301, 234)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "平泉町：
-中尊寺金色堂が有名。"
-autowrap_mode = 2
 
 [node name="picture" type="Sprite2D" parent="Positions/平泉町"]
 visible = false
-texture = ExtResource("5_q6r6c")
 
 [node name="奥州市" type="Marker2D" parent="Positions"]
 position = Vector2(-311, 176)
@@ -99,9 +67,6 @@ position = Vector2(-311, 176)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "奥州市：
-2006年に水沢市・江刺市、胆沢郡前沢町・胆沢町・衣川村が新設合併して誕生した。
-旧前沢町は前沢牛が有名。"
 
 [node name="picture" type="Sprite2D" parent="Positions/奥州市"]
 visible = false
@@ -113,9 +78,6 @@ position = Vector2(-314, 140)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "金ケ崎町：
-小さい面積でありながら工業生産が盛ん。
-県内の小学校には金ケ崎町のトヨタの工場見学するところが多い。"
 
 [node name="picture" type="Sprite2D" parent="Positions/金ケ崎町"]
 visible = false
@@ -127,8 +89,6 @@ position = Vector2(-314, 117)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "北上市：
-奥羽山脈の山が低い関係上，雪が多く積もる。"
 
 [node name="picture" type="Sprite2D" parent="Positions/北上市"]
 visible = false
@@ -140,13 +100,9 @@ position = Vector2(-312, 74)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "花巻市：
-宮沢賢治が有名ということもあり，宮沢賢治童話村などの関連施設が多い。
-また，花巻温泉も有名。"
 
 [node name="picture" type="Sprite2D" parent="Positions/花巻市"]
 visible = false
-texture = ExtResource("6_hqns4")
 
 [node name="紫波町" type="Marker2D" parent="Positions"]
 position = Vector2(-295, 37)
@@ -155,9 +111,6 @@ position = Vector2(-295, 37)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "紫波町：
-紫波中央駅前のオガールが有名。
-図書館や体育館，広場などが整備されており，便利である。"
 
 [node name="picture" type="Sprite2D" parent="Positions/紫波町"]
 visible = false
@@ -169,8 +122,6 @@ position = Vector2(-283, -2)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "矢巾町：
-岩手医科大学や南昌みらい高校など駅からのアクセスがよい学校が多い。"
 
 [node name="picture" type="Sprite2D" parent="Positions/矢巾町"]
 visible = false
@@ -182,42 +133,20 @@ position = Vector2(-285, -35)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "盛岡市：
-岩手県の県庁所在地。
-ニューヨーク・タイムズ紙「2023年に行くべき52カ所」に2番目に紹介された。"
 
 [node name="picture" type="Sprite2D" parent="Positions/盛岡市"]
 visible = false
-texture = ExtResource("7_x0ka3")
 
 [node name="滝沢市" type="Marker2D" parent="Positions"]
-position = Vector2(-339, -93)
+position = Vector2(-297, -68)
 
 [node name="description" type="Label" parent="Positions/滝沢市"]
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "滝沢市：
-農業が盛んで，スイカ・りんご・さつまいもなどの生産に加え，加工品も多く生産されている。"
 
 [node name="picture" type="Sprite2D" parent="Positions/滝沢市"]
 visible = false
-texture = ExtResource("8_x0ka3")
-
-[node name="雫石町" type="Marker2D" parent="Positions"]
-position = Vector2(-324, -46)
-
-[node name="description" type="Label" parent="Positions/雫石町"]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-text = "雫石町：
-小岩井農場が非常に有名。
-日本の南部に行くと岩手を知らなくても小岩井は知っているという人がいる。"
-
-[node name="picture" type="Sprite2D" parent="Positions/雫石町"]
-visible = false
-texture = ExtResource("8_0h7mo")
 
 [node name="八幡平市" type="Marker2D" parent="Positions"]
 position = Vector2(-336, -141)
@@ -226,8 +155,6 @@ position = Vector2(-336, -141)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "八幡平市：
-安比高原スキー場が有名。海外からのスキー客も多い。"
 
 [node name="picture" type="Sprite2D" parent="Positions/八幡平市"]
 visible = false
@@ -239,12 +166,9 @@ position = Vector2(-278, -170)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "岩手町：
-名前の通り，岩手山が非常にきれいに見える。"
 
 [node name="picture" type="Sprite2D" parent="Positions/岩手町"]
 visible = false
-texture = ExtResource("9_nr8wp")
 
 [node name="二戸市" type="Marker2D" parent="Positions"]
 position = Vector2(-271, -263)
@@ -253,10 +177,30 @@ position = Vector2(-271, -263)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "二戸市：
-漆かき職人が多く，浄法寺塗が有名。"
 
 [node name="picture" type="Sprite2D" parent="Positions/二戸市"]
+visible = false
+
+[node name="軽米町" type="Marker2D" parent="Positions"]
+position = Vector2(-202, -287)
+
+[node name="description" type="Label" parent="Positions/軽米町"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/軽米町"]
+visible = false
+
+[node name="洋野町" type="Marker2D" parent="Positions"]
+position = Vector2(-132, -306)
+
+[node name="description" type="Label" parent="Positions/洋野町"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/洋野町"]
 visible = false
 
 [node name="久慈市" type="Marker2D" parent="Positions"]
@@ -266,13 +210,42 @@ position = Vector2(-60, -227)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "久慈市：
-国内唯一の琥珀の採掘産地。
-"
 
 [node name="picture" type="Sprite2D" parent="Positions/久慈市"]
 visible = false
-texture = ExtResource("10_d2bti")
+
+[node name="野田村" type="Marker2D" parent="Positions"]
+position = Vector2(-42, -185)
+
+[node name="description" type="Label" parent="Positions/野田村"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/野田村"]
+visible = false
+
+[node name="普代村" type="Marker2D" parent="Positions"]
+position = Vector2(-23, -147)
+
+[node name="description" type="Label" parent="Positions/普代村"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/普代村"]
+visible = false
+
+[node name="田野畑村" type="Marker2D" parent="Positions"]
+position = Vector2(-21, -105)
+
+[node name="description" type="Label" parent="Positions/田野畑村"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="picture" type="Sprite2D" parent="Positions/田野畑村"]
+visible = false
 
 [node name="岩泉町" type="Marker2D" parent="Positions"]
 position = Vector2(-20, -76)
@@ -281,9 +254,6 @@ position = Vector2(-20, -76)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "岩泉町：
-鍾乳洞である龍泉洞が有名。
-非常にきれいな水を見ることができる。"
 
 [node name="picture" type="Sprite2D" parent="Positions/岩泉町"]
 visible = false
@@ -295,13 +265,9 @@ position = Vector2(10, -5)
 visible = false
 offset_right = 40.0
 offset_bottom = 23.0
-text = "宮古市：
-本州最東端の市。
-三陸漁場が近いため漁業が盛んで，「さけのまち」として知られる。"
 
 [node name="picture" type="Sprite2D" parent="Positions/宮古市"]
 visible = false
-texture = ExtResource("11_ta5nu")
 
 [node name="Node2D" type="Node2D" parent="."]
 
@@ -327,48 +293,20 @@ offset_right = -551.0
 offset_bottom = -268.0
 text = "ターン："
 
-[node name="Player1Status" type="Node2D" parent="."]
-position = Vector2(136, -355)
+[node name="Player1Satus" type="Node2D" parent="."]
+position = Vector2(164, -263)
 
-[node name="Picture" type="Sprite2D" parent="Player1Status"]
-position = Vector2(248, 244)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_0hol4")
+[node name="Sprite2D" type="Sprite2D" parent="Player1Satus"]
 
-[node name="Position" type="Label" parent="Player1Status"]
-offset_right = 500.0
-offset_bottom = 150.0
-autowrap_mode = 1
-clip_text = true
-text_overrun_behavior = 3
+[node name="Position" type="Label" parent="Player1Satus"]
+offset_right = 40.0
+offset_bottom = 23.0
 
-[node name="Player2Status" type="Node2D" parent="."]
-position = Vector2(136, 10)
+[node name="Player2Satus" type="Node2D" parent="."]
+position = Vector2(171, 74)
 
-[node name="Picture" type="Sprite2D" parent="Player2Status"]
-position = Vector2(245, 225)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_0hol4")
+[node name="Sprite2D" type="Sprite2D" parent="Player2Satus"]
 
-[node name="Position" type="Label" parent="Player2Status"]
-offset_right = 500.0
-offset_bottom = 150.0
-autowrap_mode = 1
-
-[node name="Label2" type="Label" parent="."]
-offset_left = 29.0
-offset_top = 78.0
-offset_right = 64.0
-offset_bottom = 101.0
-theme_override_font_sizes/font_size = 32
-text = "Bot"
-
-[node name="Label" type="Label" parent="."]
-offset_left = 26.0
-offset_top = -287.0
-offset_right = 85.0
-offset_bottom = -242.0
-theme_override_font_sizes/font_size = 32
-text = "You"
-
-[connection signal="pressed" from="StartButton" to="." method="_on_start_button_pressed"]
+[node name="Position" type="Label" parent="Player2Satus"]
+offset_right = 40.0
+offset_bottom = 23.0
